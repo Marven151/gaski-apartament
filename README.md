@@ -8,7 +8,7 @@ Landing page with a booking calendar for a holiday apartment on the Polish Balti
 
 - Availability calendar: pick a date range, see the number of nights, send an enquiry by e-mail with the dates pre-filled
 - Admin mode (localhost only): toggle days between free and booked, export/import availability as JSON (stored in `localStorage`)
-- Photo gallery with a lightbox
+- Photo gallery with a lightbox (arrow keys, Esc)
 - Location map (Leaflet + OpenStreetMap)
 - Responsive layout, no build step
 

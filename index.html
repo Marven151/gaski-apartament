@@ -557,7 +557,7 @@
 			<button class="lightbox-close" id="lightboxClose">&times;</button>
 			<button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
 			<button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
-			<img id="lightboxImg" src="" alt="">
+			<img id="lightboxImg" alt="">
 			<div class="lightbox-counter" id="lightboxCounter"></div>
 		</div>
 	</div>
@@ -600,6 +600,7 @@
 
 		// Dodaj obsługę błędów ładowania obrazków
 		lightboxImg.addEventListener('error', () => {
+			if (!lightbox.classList.contains('show')) return;
 			console.warn('Nie udało się załadować obrazka:', lightboxImg.src);
 			// Spróbuj załadować następny obrazek
 			showImage(currentImageIndex + 1);
