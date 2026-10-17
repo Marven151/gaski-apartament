@@ -1,6 +1,6 @@
 # Apartament Gąski
 
-Landing page with a booking calendar for a holiday apartment on the Polish Baltic coast. Demo project — contact details on the page are placeholders.
+Landing page with a booking calendar for a holiday apartment on the Polish Baltic coast. Demo project — prices on the page are examples.
 
 **Live:** https://marven151.github.io/gaski-apartament/
 
