@@ -4,7 +4,13 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Apartament w Gąskach — Rezerwacje i dostępność</title>
+	<title>Apartament w Gąskach — 20 m do plaży</title>
+	<meta name="description" content="Apartament w Gąskach nad Bałtykiem, 20 m do plaży. Basen, sauna, siłownia i hala sportowa dla gości. Sprawdź wolne terminy i napisz bez pośredników.">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Apartament w Gąskach — 20 m do plaży">
+	<meta property="og:description" content="Basen, sauna, siłownia i hala sportowa dla gości. Sprawdź wolne terminy.">
+	<meta property="og:image" content="https://marven151.github.io/gaski-apartament/img/salon2.jpg">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c6e8c'/%3E%3Cpath d='M4 20q4-4 7 0t7 0 7 0 3 0v8H4z' fill='%23fff'/%3E%3C/svg%3E">
 
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,25 +31,12 @@
 
 	<style>
 		:root{
-			--bg: #f6fbff;
-			--bg-2: #fff8f0;
-			--text: #0f1d2b;
-			--muted: #6b7a86;
-			--primary: #2ec4b6;
-			--primary-2: #00bcd4;
-			--accent: #7b61ff;
-			--warning: #ffb703;
-			--danger: #ff6b6b;
-			--success: #35c27e;
-			--card: rgba(255,255,255,0.7);
-			--glass: blur(10px);
-			--shadow: 0 10px 30px rgba(0,0,0,0.08);
-			--radius: 18px;
+			--bg: #f7f4ee; --bg-2: #f7f4ee; --text: #1c2428; --muted: #5d6a70; --primary: #1c6e8c; --primary-2: #1c6e8c; --accent: #1c6e8c; --warning: #ffb703; --danger: #c0504d; --success: #3f8f5f; --card: #ffffff; --glass: none; --shadow: 0 1px 3px rgba(0,0,0,0.08); --radius: 10px;
 			--pad: 20px;
 		}
 
 		*{box-sizing: border-box}
-		html, body { margin: 0; padding: 0; color: var(--text); background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%); font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}
+		html, body { margin: 0; padding: 0; color: var(--text); background: var(--bg); font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}
 		a{ color: inherit; text-decoration: none; }
 		img{ max-width: 100%; display:block; }
 
@@ -52,75 +45,50 @@
 		.navbar{
 			position: sticky; top: 0; z-index: 50;
 			backdrop-filter: var(--glass);
-			background: rgba(255,255,255,0.65);
-			box-shadow: var(--shadow);
-		}
-		.navbar-inner{
+			background: rgba(247,244,238,0.95); border-bottom: 1px solid rgba(0,0,0,0.08); } .navbar-inner{
 			display: flex; align-items: center; justify-content: space-between; gap: 16px;
 			padding: 14px 0;
 		}
 		.brand{
 			display:flex; align-items:center; gap:10px; font-weight:700; font-family: 'Poppins', sans-serif;
 		}
-		.brand-badge{
-			width:36px;height:36px;border-radius:12px;
-			background: radial-gradient(circle at 20% 20%, var(--primary), var(--primary-2));
-			box-shadow: 0 8px 20px rgba(0,188,212,0.35);
-		}
+		.brand-badge{ width:12px;height:12px;border-radius:50%; background: var(--primary); }
 		.nav-links{ display:flex; gap: 18px; align-items:center; flex-wrap: wrap; }
 		.nav-links a{ padding:8px 12px; border-radius: 999px; color: var(--muted); font-weight:500; }
 		.nav-links a:hover{ background: rgba(0,0,0,0.06); color: var(--text); }
 		.nav-links a.button-primary, .nav-links a.button-primary:hover{ color:#fff; font-weight:600; }
 
 		.button-primary{
-			background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-			color: #fff; padding: 10px 16px; border-radius: 12px; font-weight:600;
-			box-shadow: 0 10px 24px rgba(46,196,182,0.3);
-			transition: transform .15s ease, box-shadow .15s ease;
+			background: var(--primary); color: #fff; padding: 10px 16px; border-radius: 8px; border:0; font: inherit; font-weight:600; cursor:pointer; transition: background .15s ease;
 			display:inline-flex; align-items:center; gap:10px;
 		}
-		.button-primary:hover{ transform: translateY(-1px); box-shadow: 0 14px 28px rgba(46,196,182,0.35); }
-		.button-ghost{ padding: 10px 14px; border-radius: 12px; border:1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.6); }
+		.button-primary:hover{ background:#155a74; } a:focus-visible, button:focus-visible{ outline:2px solid var(--primary); outline-offset:2px; }
+		.button-ghost{ padding: 10px 14px; border-radius: 8px; border:1px solid rgba(0,0,0,0.18); background: transparent; font: inherit; cursor:pointer; }
 
 		.hero{
 			position: relative; overflow: clip;
-			padding: 60px 0 40px;
-			background: radial-gradient(1000px 500px at 90% -10%, rgba(123,97,255,0.25), transparent 55%),
-			            radial-gradient(1200px 600px at -10% -10%, rgba(46,196,182,0.20), transparent 50%);
+			padding: 56px 0 40px;
 		}
 		.hero-grid{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 26px; align-items: center; }
 		@media (max-width: 900px){ .hero-grid{ grid-template-columns: 1fr; } }
 
-		.hero-card{
-			padding: 28px; border-radius: var(--radius);
-			background: var(--card); backdrop-filter: var(--glass);
-			box-shadow: var(--shadow);
-		}
-		.kicker{ color: var(--primary); font-weight:700; letter-spacing:.04em; text-transform: uppercase; font-size: .88rem; }
-		.hero h1{ font-family: 'Poppins', sans-serif; margin:10px 0 14px; font-size: clamp(28px, 5vw, 44px); line-height: 1.08; }
+		.hero-card{ padding: 4px 0; }
+		.kicker{ color: var(--primary); font-weight:600; font-size: .95rem; }
+		.hero h1{ font-family: 'Poppins', sans-serif; margin:10px 0 14px; font-size: clamp(28px, 5vw, 42px); line-height: 1.12; }
 		.hero p{ color: var(--muted); font-size: 1.04rem; }
 		.hero-cta{ display:flex; gap: 12px; align-items:center; flex-wrap: wrap; margin-top: 16px; }
 		.badges{ display:flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
 		.badge{
-			font-weight:600; color:#0b3b4a; background: rgba(46,196,182,0.15);
+			font-weight:500; color:#1c2428; background: #e8e2d4;
 			padding: 8px 12px; border-radius: 999px; display:inline-flex; align-items:center; gap:10px;
 		}
 
 		.photo-hero{
-			border-radius: 22px; aspect-ratio: 4/3; background:
-				linear-gradient(135deg, #d6f7ff, #fff9f1);
+			border-radius: 10px; aspect-ratio: 4/3; background: #e8e2d4;
 			position: relative; overflow: hidden;
 			box-shadow: var(--shadow);
 		}
-		.photo-hero .overlay{
-			position: absolute; inset: 0;
-			background-image: radial-gradient(ellipse at 20% 30%, rgba(123,97,255,.25), transparent 45%),
-							 radial-gradient(ellipse at 80% 70%, rgba(46,196,182,.25), transparent 45%);
-			mix-blend-mode: multiply;
-		}
-		.photo-hero .placeholder{
-			position:absolute; inset: 0; display:flex; align-items:center; justify-content:center; color:#4b5563; font-weight:600;
-		}
+		.photo-hero img, .gal-item img{ width:100%; height:100%; object-fit:cover; }
 
 		.section{ padding: 56px 0; }
 		.section-title{ font-family:'Poppins', sans-serif; font-size: clamp(22px, 3vw, 30px); margin:0 0 14px; }
@@ -130,20 +98,10 @@
 		@media (max-width: 1000px){ .cards{ grid-template-columns: repeat(2, 1fr);} }
 		@media (max-width: 600px){ .cards{ grid-template-columns: 1fr;} }
 		.card{
-			background: var(--card); backdrop-filter: var(--glass);
-			border-radius: 18px; padding: 18px; box-shadow: var(--shadow);
-			display:flex; gap:12px; align-items:flex-start; transition: transform .18s ease, box-shadow .18s ease;
-		}
-		.card:hover{ transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
-		.card-icon{ width: 42px; height: 42px; border-radius: 12px; display:grid; place-items:center; color: white;
-			background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); }
-		.card h3{ margin: 6px 0 6px; font-size: 1.02rem; }
+			background: var(--card); border-radius: 10px; padding: 16px 18px; border:1px solid rgba(0,0,0,0.08); border-top: 3px solid var(--primary); } .card h3{ margin: 0 0 6px; font-size: 1.02rem; }
 		.card p{ margin: 0; color: var(--muted); }
 
-		.calendar-wrap{
-			background: var(--card); backdrop-filter: var(--glass);
-			border-radius: 18px; padding: 18px; box-shadow: var(--shadow);
-		}
+		.calendar-wrap{ background: var(--card); border-radius: 10px; padding: 18px; border:1px solid rgba(0,0,0,0.08); }
 		.calendar-head{
 			display:flex; justify-content: space-between; align-items:center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;
 		}
@@ -152,7 +110,7 @@
 		.dot{ width:12px; height:12px; border-radius: 50%; }
 		.dot-free{ background: var(--success); }
 		.dot-booked{ background: var(--danger); }
-		.dot-user{ background: var(--accent); }
+		.dot-user{ background: var(--primary); }
 
 		.calendar-grid{
 			display:grid; gap: 16px;
@@ -168,7 +126,7 @@
 		}
 		.month-head{
 			display:flex; align-items:center; justify-content: space-between;
-			padding: 10px 12px; background: linear-gradient(135deg, #fafdff, #fff4ec);
+			padding: 10px 12px; background: #f1ece0;
 			border-bottom: 1px solid rgba(0,0,0,0.06);
 			font-weight:600;
 		}
@@ -184,25 +142,24 @@
 			padding: 10px; text-align:center; background: rgba(0,0,0,0.02);
 		}
 		.day{
-			position:relative; padding: 12px 8px; text-align:center;
-			min-height: 42px; font-weight:600; cursor:pointer; user-select:none;
+			position:relative; padding: 12px 8px; text-align:center; font: inherit; color: inherit; background: none; border: 0; border-radius: 0; min-height: 42px; font-weight:600; cursor:pointer; user-select:none;
 			border-right: 1px solid rgba(0,0,0,0.03);
 			border-bottom: 1px solid rgba(0,0,0,0.03);
 			transition: background .12s ease, color .12s ease, transform .08s ease;
 		}
 		.day:hover{ background: rgba(46,196,182,0.07); }
 		.day.inactive{ color: #b6c2cf; cursor: default; background: rgba(0,0,0,0.02); }
-		.day.past{ color:#a0a8b2; }
+		.day.past{ color:#a0a8b2; cursor:not-allowed; }
 		.badge-day{
 			position:absolute; top: 8px; left: 8px; width:8px; height:8px; border-radius:50%;
 		}
 		.free .badge-day{ background: var(--success); }
 		.booked{ color:#c84a4a; background: rgba(255, 107, 107, 0.08); }
 		.booked .badge-day{ background: var(--danger); }
-		.selected{ background: rgba(123,97,255,0.08); box-shadow: inset 0 0 0 2px rgba(123,97,255,0.25); color:#3b2fd4; }
-		.range{ background: linear-gradient(90deg, rgba(123,97,255,0.07), rgba(46,196,182,0.07)); }
+		.selected{ background: rgba(28,110,140,0.12); box-shadow: inset 0 0 0 2px rgba(28,110,140,0.5); color:#0f4a60; }
+		.range{ background: rgba(28,110,140,0.08); }
 		.range-start, .range-end{
-			box-shadow: inset 0 0 0 2px rgba(46,196,182,0.35);
+			box-shadow: inset 0 0 0 2px rgba(28,110,140,0.6);
 		}
 
 		.admin-bar{
@@ -219,7 +176,7 @@
 
 		.selection-info{
 			margin-top: 10px; padding: 12px; border-radius: 12px;
-			background: rgba(46,196,182,0.1); color:#0b3b4a; font-weight:600;
+			background: #e8e2d4; color:#1c2428; font-weight:600;
 		}
 		.selection-muted{ color:var(--muted); font-weight:500; }
 
@@ -229,16 +186,10 @@
 		@media (max-width: 900px){ .gallery{ grid-template-columns: repeat(2,1fr);} }
 		@media (max-width: 600px){ .gallery{ grid-template-columns: 1fr;} }
 		.gal-item{
-			aspect-ratio: 4/3; border-radius: 16px; overflow:hidden; position:relative;
-			background: linear-gradient(135deg,#dcefff,#fff2e1);
+			aspect-ratio: 4/3; border-radius: 10px; overflow:hidden; position:relative; background: #e8e2d4;
 			box-shadow: var(--shadow);
 			cursor: pointer;
-			transition: transform .2s ease, box-shadow .2s ease;
-		}
-		.gal-item:hover{ 
-			transform: translateY(-3px); 
-			box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
-		}
+			} .gal-item img{ transition: transform .25s ease; } .gal-item:hover img{ transform: scale(1.03); }
 		.gal-item .label{
 			position:absolute; bottom:10px; left:10px; background: rgba(0,0,0,0.45); color:#fff; padding: 6px 10px; border-radius: 999px; font-size:.86rem;
 		}
@@ -285,11 +236,10 @@
 			.lightbox-close{ top: 20px; right: 20px; }
 		}
 
-		#map{ width: 100%; height: 380px; border-radius: 18px; overflow:hidden; box-shadow: var(--shadow); }
+		#map{ width: 100%; height: 380px; border-radius: 10px; overflow:hidden; border:1px solid rgba(0,0,0,0.08); }
 
 		.cta{
-			background: linear-gradient(135deg, rgba(46,196,182,0.2), rgba(123,97,255,0.18));
-			border-radius: 18px; padding: 18px; display:flex; align-items:center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+			background: #e8e2d4; border-radius: 10px; padding: 22px; display:flex; align-items:center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
 		}
 
 		.footer{
@@ -326,9 +276,9 @@
 	<section class="hero">
 		<div class="container hero-grid">
 			<div class="hero-card">
-				<div class="kicker">Blisko plaży, nad polskim morzem</div>
-				<h1>Nowoczesny apartament w Gąskach — komfort, estetyka i pełen relaks</h1>
-				<p>W okolicy sklepy i atrakcje. Do dyspozycji naszych Gości: basen, sauna, hala sportowa (tenis/nożna), siłownia wewnętrzna i zewnętrzna. Profesjonalna, miła obsługa. Rezerwuj wygodnie bez pośredników.</p>
+				<div class="kicker">Gąski, 20 m od plaży</div>
+				<h1>Apartament w Gąskach, kilka kroków od Bałtyku</h1>
+				<p>Dla gości basen, sauna, hala sportowa (tenis i piłka nożna) oraz siłownia, wewnętrzna i zewnętrzna. W okolicy sklepy i atrakcje. Rezerwujesz bezpośrednio z właścicielem, bez pośredników.</p>
 				<div class="hero-cta">
 					<a href="#dostepnosc" class="button-primary">Sprawdź dostępność</a>
 					<a href="#lokalizacja" class="button-ghost">Zobacz lokalizację</a>
@@ -340,9 +290,7 @@
 				</div>
 			</div>
 			<div class="photo-hero">
-				<img src="img/salon2.jpg" alt="Salon apartamentu" style="width:100%; height:100%; object-fit: cover;">
-				<div class="overlay"></div>
-				<div class="placeholder"></div>
+				<img src="img/salon2.jpg" alt="Salon apartamentu" width="895" height="671" fetchpriority="high">
 			</div>
 		</div>
 	</section>
@@ -353,59 +301,48 @@
 			<p class="section-sub">Wszystko, czego potrzeba do idealnego wypoczynku.</p>
 			<div class="cards">
 				<div class="card">
-					<div class="card-icon">��️</div>
 					<div>
 						<h3>Blisko plaży</h3>
-						<p>Krótki spacer i jesteś nad Bałtykiem.</p>
+						<p>20 m do plaży.</p>
 					</div>
 				</div>
 				<div class="card">
-					<div class="card-icon">🏊</div>
 					<div>
 						<h3>Basen i sauna</h3>
-						<p>Dostępne bezpłatnie dla naszych Gości.</p>
+						<p>Bezpłatnie dla gości.</p>
 					</div>
 				</div>
 				<div class="card">
-					<div class="card-icon">🎾</div>
 					<div>
 						<h3>Hala sportowa</h3>
-						<p>Tenis i piłka nożna w jednym obiekcie.</p>
+						<p>Tenis i piłka nożna, bezpłatnie.</p>
 					</div>
 				</div>
 				<div class="card">
-					<div class="card-icon">��️</div>
 					<div>
 						<h3>Siłownia</h3>
-						<p>Wewnętrzna i zewnętrzna strefa treningu.</p>
+						<p>Wewnętrzna i zewnętrzna.</p>
 					</div>
 				</div>
 				<div class="card">
-					<div class="card-icon">��️</div>
 					<div>
 						<h3>Sklepy i atrakcje</h3>
-						<p>W okolicy znajdziesz wszystko pod ręką.</p>
+						<p>W okolicy.</p>
 					</div>
 				</div>
 				<div class="card">
-					<div class="card-icon">🤝</div>
 					<div>
-						<h3>Profesjonalna obsługa</h3>
-						<p>Kontakt i wsparcie na najwyższym poziomie.</p>
+						<h3>Obsługa na miejscu</h3> <p>Pomoc przy zameldowaniu i w trakcie pobytu.</p>
 					</div>
 				</div>
 				<div class="card">
-					<div class="card-icon">🧼</div>
 					<div>
-						<h3>Czystość i komfort</h3>
-						<p>Estetyczne, jasne wnętrza, dbałość o detale.</p>
+						<h3>Jasne wnętrza</h3> <p>Salon, sypialnie, kuchnia i dwie łazienki.</p>
 					</div>
 				</div>
 				<div class="card">
-					<div class="card-icon">📶</div>
 					<div>
-						<h3>Szybkie Wi‑Fi</h3>
-						<p>Pracuj zdalnie lub streamuj bez przeszkód.</p>
+						<h3>Wi‑Fi</h3> <p>W cenie pobytu.</p>
 					</div>
 				</div>
 			</div>
@@ -415,11 +352,11 @@
 	<section id="dostepnosc" class="section">
 		<div class="container">
 			<h2 class="section-title">Kalendarz dostępności</h2>
-			<p class="section-sub"></p>
+			<p class="section-sub">Kliknij datę przyjazdu, potem datę wyjazdu.</p>
 
 			<div class="admin-bar">
 				<strong>Tryb admina (tylko localhost)</strong>
-				<div class="small">Kliknij w dzień, aby przełączać: wolne ↔ zajęte. Zmiany możesz zapisać lokalnie lub wyeksportować do JSON.</div>
+				<div class="small">Kliknij w dzień, aby przełączać: wolne ↔ zajęte. Wyeksportuj JSON i wgraj go do repozytorium jako availability.json, żeby goście widzieli zajęte dni.</div>
 				<div class="admin-actions">
 					<button id="saveLocal" class="button-ghost">Zapisz lokalnie</button>
 					<button id="clearLocal" class="button-ghost">Wyczyść zapis lokalny</button>
@@ -440,8 +377,8 @@
 						<div class="legend-item"><span class="dot dot-user" style="background:var(--accent)"></span> Twój wybór</div>
 					</div>
 					<div class="month-nav">
-						<button class="icon-btn" id="prevBtn" title="Poprzednie miesiące">‹</button>
-						<button class="icon-btn" id="nextBtn" title="Kolejne miesiące">›</button>
+						<button class="icon-btn" id="prevBtn" title="Poprzednie miesiące" aria-label="Poprzednie miesiące">‹</button>
+						<button class="icon-btn" id="nextBtn" title="Kolejne miesiące" aria-label="Kolejne miesiące">›</button>
 					</div>
 				</div>
 
@@ -461,63 +398,63 @@
 			<p class="section-sub">Kliknij w zdjęcie, aby powiększyć i przejść do następnego.</p>
 			<div class="gallery">
 				<div class="gal-item" data-index="0">
-					<img src="img/salon.jpg" alt="Salon" style="width:100%;height:100%;object-fit:cover;">
+					<img src="img/salon.jpg" alt="Salon" loading="lazy" decoding="async">
 					<div class="label">Salon</div>
 				</div>
 				<div class="gal-item" data-index="1">
-					<img src="img/salon2.jpg" alt="Salon widok 2" style="width:100%;height:100%;object-fit:cover;">
+					<img src="img/salon2.jpg" alt="Salon widok 2" loading="lazy" decoding="async">
 					<div class="label">Salon widok 2</div>
 				</div>
 				<div class="gal-item" data-index="2">
-					<img src="img/sypialnia1.2.jpg" alt="Sypialnia" style="width:100%;height:100%;object-fit:cover;">
+					<img src="img/sypialnia1.2.jpg" alt="Sypialnia" loading="lazy" decoding="async">
 					<div class="label">Sypialnia</div>
 				</div>
 				<div class="gal-item" data-index="3">
-					<img src="img/sypialnia2.jpg" alt="Sypialnia 2" style="width:100%;height:100%;object-fit:cover;">
+					<img src="img/sypialnia2.jpg" alt="Sypialnia 2" loading="lazy" decoding="async">
 					<div class="label">Sypialnia 2</div>
 				</div>
 				<div class="gal-item" data-index="4">
-					<img src="img/kuchnia3.jpg" alt="Kuchnia" style="width:100%;height:100%;object-fit:cover;">
+					<img src="img/kuchnia3.jpg" alt="Kuchnia" loading="lazy" decoding="async">
 					<div class="label">Kuchnia</div>
 				</div>
 				<div class="gal-item" data-index="5">
-					<img src="img/lazienka3.jpg" alt="Łazienka" style="width:100%;height:100%;object-fit:cover;">
+					<img src="img/lazienka3.jpg" alt="Łazienka" loading="lazy" decoding="async">
 					<div class="label">Łazienka</div>
 				</div>
                 <div class="gal-item" data-index="6">
-					<img src="img/lazienka.jpg" alt="Łazienka" style="width:100%;height:100%;object-fit:cover;">
-					<div class="label">Łazienka nr. 2</div>
+					<img src="img/lazienka.jpg" alt="Łazienka" loading="lazy" decoding="async">
+					<div class="label">Łazienka 2</div>
 				</div>
 				<div class="gal-item" data-index="7">
-					<img src="img/lazienka2.jpg" alt="Łazienka 2" style="width:100%;height:100%;object-fit:cover;">
-					<div class="label">Łazienka nr. 2 inne ujęcie</div>
+					<img src="img/lazienka2.jpg" alt="Łazienka 2" loading="lazy" decoding="async">
+					<div class="label">Łazienka 2, drugie ujęcie</div>
 				</div>
                 <div class="gal-item" data-index="8">
-					<img src="img/hol.jpg" alt="Balkon/taras" style="width:100%;height:100%;object-fit:cover;">
-					<div class="label">Całe mieszkanie</div>
+					<img src="img/hol.jpg" alt="Hol" loading="lazy" decoding="async">
+					<div class="label">Hol</div>
 				</div>
 				<div class="gal-item" data-index="9">
-					<img src="img/osiedle.jpg" alt="Balkon/taras" style="width:100%;height:100%;object-fit:cover;">
-					<div class="label">taras/ogródek</div>
+					<img src="img/osiedle.jpg" alt="Taras i ogródek" loading="lazy" decoding="async">
+					<div class="label">Taras i ogródek</div>
 				</div>
 				<div class="gal-item" data-index="10">
-					<img src="img/widoczek.jpg" alt="Okolica" style="width:100%;height:100%;object-fit:cover;">
+					<img src="img/widoczek.jpg" alt="Okolica" loading="lazy" decoding="async">
 					<div class="label">Okolica</div>
 				</div>
                 <div class="gal-item" data-index="11">
-					<img src="img/basen.jpg" alt="Okolica" style="width:100%;height:100%;object-fit:cover;">
+					<img src="img/basen.jpg" alt="Basen" loading="lazy" decoding="async">
 					<div class="label">Basen</div>
 				</div>
                 <div class="gal-item" data-index="12">
-					<img src="img/tenis.jpg" alt="Okolica" style="width:100%;height:100%;object-fit:cover;">
-					<div class="label">Boisko do tenisa/piłki noznej</div>
+					<img src="img/tenis.jpg" alt="Boisko do tenisa i piłki nożnej" loading="lazy" decoding="async">
+					<div class="label">Boisko do tenisa i piłki nożnej</div>
 				</div>
                 <div class="gal-item" data-index="13">
-					<img src="img/sauna.jpg" alt="Okolica" style="width:100%;height:100%;object-fit:cover;">
+					<img src="img/sauna.jpg" alt="Sauna" loading="lazy" decoding="async">
 					<div class="label">Sauna</div>
 				</div>
                 <div class="gal-item" data-index="14">
-					<img src="img/silownia.jpg" alt="Okolica" style="width:100%;height:100%;object-fit:cover;">
+					<img src="img/silownia.jpg" alt="Siłownia" loading="lazy" decoding="async">
 					<div class="label">Siłownia</div>
 				</div>
                 
@@ -555,9 +492,9 @@
 
 	<div class="lightbox" id="lightbox">
 		<div class="lightbox-content">
-			<button class="lightbox-close" id="lightboxClose">&times;</button>
-			<button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
-			<button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+			<button class="lightbox-close" id="lightboxClose" aria-label="Zamknij">&times;</button>
+			<button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Poprzednie zdjęcie">‹</button>
+			<button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Następne zdjęcie">›</button>
 			<img id="lightboxImg" alt="">
 			<div class="lightbox-counter" id="lightboxCounter"></div>
 		</div>
@@ -614,9 +551,9 @@
 			{ src: 'img/sypialnia2.jpg', alt: 'Sypialnia 2' },
 			{ src: 'img/kuchnia3.jpg', alt: 'Kuchnia' },
 			{ src: 'img/lazienka3.jpg', alt: 'Łazienka' },
-			{ src: 'img/lazienka.jpg', alt: 'Łazienka nr. 2' },
-			{ src: 'img/lazienka2.jpg', alt: 'Łazienka nr. 2 inne ujęcie' },
-			{ src: 'img/hol.jpg', alt: 'Całe mieszkanie' },
+			{ src: 'img/lazienka.jpg', alt: 'Łazienka 2' },
+			{ src: 'img/lazienka2.jpg', alt: 'Łazienka 2 inne ujęcie' },
+			{ src: 'img/hol.jpg', alt: 'Hol' },
 			{ src: 'img/osiedle.jpg', alt: 'Taras/ogródek' },
 			{ src: 'img/widoczek.jpg', alt: 'Okolica' },
 			{ src: 'img/basen.jpg', alt: 'Basen' },
@@ -654,8 +591,16 @@
 			toastEl.classList.add('show');
 		}
 
-		function loadAvailability(){
-			const local = localStorage.getItem(STORAGE_KEY);
+		async function loadPublishedAvailability(){
+				try{
+					const res = await fetch('availability.json', { cache: 'no-cache' });
+					if(!res.ok) return null;
+					const data = await res.json();
+					return (data && typeof data === 'object' && !Array.isArray(data)) ? data : null;
+				}catch{ return null; }
+			}
+			function loadAvailability(){
+				const local = isAdmin ? localStorage.getItem(STORAGE_KEY) : null;
 			if(local){
 				try{ availability = JSON.parse(local) || {}; }
 				catch{ availability = {}; }
@@ -747,11 +692,9 @@
 
 			const cells = getMonthMatrix(year, month);
 			cells.forEach(day=>{
-				const d = document.createElement('div');
-				d.className = 'day';
+				const d = document.createElement('button'); d.type = 'button'; d.className = 'day';
 				if(day===null){
-					d.classList.add('inactive');
-					d.innerHTML = '&nbsp;';
+					d.classList.add('inactive'); d.disabled = true; d.tabIndex = -1; d.setAttribute('aria-hidden','true');
 				}else{
 					const key = toKey(day);
 					const isBooked = availability[key]==='booked';
@@ -766,7 +709,7 @@
 					if(isBooked){ d.classList.add('booked'); }
 					else{ d.classList.add('free'); }
 
-					if(isPast){ d.classList.add('past'); }
+					if(isPast){ d.classList.add('past'); } d.setAttribute('aria-label', day.getDate()+' '+MONTHS[month].toLowerCase()+' '+year+(isBooked?', zajęte':', wolne'));
 
 					if(selectedStart && isSameDay(day, selectedStart)){ d.classList.add('selected','range-start'); }
 					if(selectedEnd && isSameDay(day, selectedEnd)){ d.classList.add('selected','range-end'); }
@@ -780,7 +723,7 @@
 							saveAvailability();
 							renderCalendar();
 						}else{
-							if(isBooked) return;
+							if(isBooked || isPast) return;
 							if(!selectedStart || (selectedStart && selectedEnd)){
 								selectedStart = day;
 								selectedEnd = null;
@@ -962,8 +905,7 @@
 		}
 
 		function checkImagesAvailability() {
-			const availableImages = images.filter(img => img.src);
-			console.log(`Dostępne obrazki: ${availableImages.length}/${images.length}`);
+						
 			
 			// Sprawdź czy wszystkie elementy galerii mają odpowiadające im obrazki
 			galleryItems.forEach((item, index) => {
@@ -981,9 +923,7 @@
 
 		function init() {
 			document.getElementById('year').textContent = new Date().getFullYear();
-			loadAvailability();
-			renderCalendar();
-			updateSelectionInfo();
+			loadAvailability(); renderCalendar(); updateSelectionInfo(); if(!(isAdmin && localStorage.getItem(STORAGE_KEY))){ loadPublishedAvailability().then(data=>{ if(data){ availability = data; renderCalendar(); } }); }
 			initMap();
 			initEventListeners();
 			checkImagesAvailability();
