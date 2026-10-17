@@ -493,6 +493,7 @@
 			<h2 class="section-title">Lokalizacja</h2>
 			<p class="section-sub">Gąski, Pomorze Zachodnie — spokojna okolica, blisko plaży.</p>
 			<div id="map"></div>
+			<p class="small">Zaznaczony obszar jest orientacyjny. Dokładny adres podamy po potwierdzeniu rezerwacji.</p>
 		</div>
 	</section>
 
@@ -863,13 +864,15 @@
 		}
 
 		function initMap(){
-			const coords = [54.2288, 15.9439];
-			const map = L.map('map', { scrollWheelZoom: false }).setView(coords, 13);
+			const center = [54.2430, 15.8908];
+			const map = L.map('map', { scrollWheelZoom: false }).setView(center, 14);
 			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				maxZoom: 19,
 				attribution: '&copy; OpenStreetMap'
 			}).addTo(map);
-			L.marker(coords).addTo(map).bindPopup('Apartament w Gąskach — blisko plaży');
+			L.circle(center, { radius: 600, color: '#1c6e8c', weight: 2, fillColor: '#1c6e8c', fillOpacity: 0.15 })
+				.addTo(map)
+				.bindPopup('Okolica apartamentu. Dokładny adres podamy po potwierdzeniu rezerwacji.');
 		}
 
 		function initEventListeners() {
