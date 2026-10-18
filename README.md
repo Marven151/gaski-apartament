@@ -1,6 +1,6 @@
 # Apartament Gąski
 
-Landing page with a booking calendar for a holiday apartment on the Polish Baltic coast. A real apartment. Prices on the page are indicative and confirmed by e-mail.
+Landing page with a booking calendar for a holiday apartment on the Polish Baltic coast. The website of a real apartment by the sea. Details of a stay are confirmed by e-mail.
 
 **Live:** https://marven151.github.io/gaski-apartament/
 
@@ -23,3 +23,7 @@ python3 -m http.server 8000
 ```
 
 Open http://localhost:8000.
+
+## Licence
+
+The code is MIT-licensed (see `LICENSE`). The photographs in `img/` show a private apartment and are not covered by that licence: all rights reserved.
