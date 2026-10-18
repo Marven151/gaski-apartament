@@ -375,6 +375,7 @@ const $=id=>document.getElementById(id);
 const grid=$('calendarGrid'),info=$('selectionInfo'),hint=$('selectionHint'),toastEl=$('toast');
 
 const toKey=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const pl=d=>String(d.getDate()).padStart(2,'0')+'.'+String(d.getMonth()+1).padStart(2,'0')+'.'+d.getFullYear();
 const fromKey=k=>{const [y,m,d]=k.split('-').map(Number);return new Date(y,m-1,d)};
 const sameDay=(a,b)=>toKey(a)===toKey(b);
 const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
@@ -454,13 +455,13 @@ function updateInfo(){
   if(selectedStart&&selectedEnd){
     const n=Math.max(1,daysBetween(selectedStart,selectedEnd));
     const word=n===1?'noc':(n%10>=2&&n%10<=4&&!(n%100>=12&&n%100<=14)?'noce':'nocy');
-    info.hidden=false;info.textContent=`${toKey(selectedStart)} → ${toKey(selectedEnd)}, ${n} ${word}`;
+    info.hidden=false;info.textContent=`${pl(selectedStart)} → ${pl(selectedEnd)}, ${n} ${word}`;
     hint.hidden=true;
-    const body=`Dzień dobry,\n\nchciałbym/chciałabym zarezerwować apartament w terminie:\n${toKey(selectedStart)} → ${toKey(selectedEnd)} (${n} ${word}).\n\nLiczba osób: \n\nProszę o informację o dostępności i cenie.\n\nPozdrawiam`;
+    const body=`Dzień dobry,\n\nchciałbym/chciałabym zarezerwować apartament w terminie:\n${pl(selectedStart)} → ${pl(selectedEnd)} (${n} ${word}).\n\nLiczba osób: \n\nProszę o informację o dostępności i cenie.\n\nPozdrawiam`;
     const href=`mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     mail.href=href;card.href=href;
   }else if(selectedStart){
-    info.hidden=false;info.textContent=`Przyjazd ${toKey(selectedStart)}. Wybierz datę wyjazdu.`;hint.hidden=true;
+    info.hidden=false;info.textContent=`Przyjazd ${pl(selectedStart)}. Wybierz datę wyjazdu.`;hint.hidden=true;
   }else{info.hidden=true;hint.hidden=false}
 }
 
